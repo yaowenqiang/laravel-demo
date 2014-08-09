@@ -37,7 +37,8 @@ Route::get('/', function()
     //$painting->title = "Do No Wriong - Just Do Right";
     //$painting->save();
     //return $painting->title;
-	return View::make('hello',array('theLocation'=>'NYQ'));
+    $theLandmarks = array('St.Marks','Brouklyn Heights','Central parks','Time Square');
+	return View::make('hello',array('theLocation'=>'NYQ','theWeather'=>'stormy','theLandmarks'=>$theLandmarks));
 });
 Route::get('about', function()
 {
