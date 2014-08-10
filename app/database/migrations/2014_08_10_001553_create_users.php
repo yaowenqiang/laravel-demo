@@ -18,8 +18,8 @@ class CreateUsers extends Migration {
             $newTable->increments('id');
             $newTable->string('email')->unique();
             $newTable->string('username',100)->unique();
-            $newTable->string('password',15);
-            $newTable->string('remeber_token',100);
+            $newTable->string('password',255);
+            $newTable->string('remember_token',100);
             $newTable->timestamps();
 
         });
