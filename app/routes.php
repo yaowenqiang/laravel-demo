@@ -58,3 +58,13 @@ Route::get('about/classes/{theSubject}', function($theSubject)
     //about/classes/sculpture(雕刻；刻蚀)
     return " Content  about {$theSubject} classes  go here";
 });
+
+Route::get('signup', function()
+{
+    return View::make('signup');
+});
+Route::post('thanks', function()
+{
+    $theEmail = Input::get('email');
+    return View::make('thanks')->with('theEmail',$theEmail);
+});
